@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+body {
+  position: relative; /* Set the position property to relative to position the pseudo-element */
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+body::before {
+  content: "";
+  position: absolute; /* Set the position property to absolute to position the pseudo-element */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Set the background color to a semi-transparent black */
+  filter: blur(5px); /* Apply a blur filter to the pseudo-element */
+  z-index: -1; /* Set the z-index property to -1 to position the pseudo-element behind the body */
+}
